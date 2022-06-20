@@ -67,6 +67,7 @@ date %rearrdate%
 time %splittime%
 
 ECHO Now syncing to time server
+net start w32time
 w32tm /config /syncfromflags:manual /manualpeerlist:time.google.com
 w32tm /config /update
 w32tm /resync
